@@ -44,7 +44,6 @@ Demo_Framework/
 │   └── checkout-cod.spec.js
 │
 ├── utils/
-│   ├── fakerUtils.js
 │   └── testData.js
 │
 ├── playwright.config.js
