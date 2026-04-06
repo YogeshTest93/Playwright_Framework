@@ -1,10 +1,8 @@
 class HomePage {
   constructor(page) {
     this.page = page;
-
-    // Locators
-    this.registerLink = page.getByRole('link', { name: 'Register' });
     this.loginLink = page.getByRole('link', { name: 'Log in' });
+    this.registerLink = page.getByRole('link', { name: 'Register' });
     this.searchBox = page.locator('#small-searchterms');
     this.searchButton = page.getByRole('button', { name: 'Search' });
     this.logoutLink = page.getByRole('link', { name: 'Log out' });
@@ -14,12 +12,16 @@ class HomePage {
     await this.page.goto('https://demowebshop.tricentis.com/');
   }
 
-  async clickRegister() {
-    await this.registerLink.click();
+  async goToHomePage() {
+    await this.page.goto('https://demowebshop.tricentis.com/');
   }
 
   async clickLogin() {
     await this.loginLink.click();
+  }
+
+  async clickRegister() {
+    await this.registerLink.click();
   }
 
   async searchProduct(productName) {

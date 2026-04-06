@@ -44,7 +44,7 @@ test('User should register and login successfully', async ({ page }) => {
   await homePage.clickLogin();
   await expect(page).toHaveURL(/login/);
 
-  await loginPage.login(userData.email, userData.password);
+  await loginPage.loginUser(userData.email, userData.password);
 
   // Validate successful login
   await loginPage.verifyLoginSuccess(userData.email);

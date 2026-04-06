@@ -16,8 +16,14 @@ const existingUser = {
 
 // Product data
 const productData = {
-  name: 'Blue Jeans',
-  searchKeyword: 'Blue Jeans'
+  product1: {
+    name: 'Blue Jeans',
+    searchKeyword: 'Blue Jeans'
+  },
+  product2: {
+    name: '14.1-inch Laptop',
+    searchKeyword: '14.1-inch Laptop'
+  }
 };
 
 // Billing Address

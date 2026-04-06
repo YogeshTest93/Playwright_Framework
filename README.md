@@ -21,8 +21,4 @@
 - Validate successful order placement
 
 ## Framework Design
-This project is designed using the **Page Object Model (POM)** approach for better:
-- Maintainability
-- Reusability
-- Readability
-- Scalability
+This project is designed using the **Page Object Model (POM)** approach.
