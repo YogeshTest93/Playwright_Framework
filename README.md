@@ -1,24 +1,80 @@
-# Demo Web Shop Automation Assignment
+# Leadrat Automation Assignment
 
 ## Tech Stack
-- Playwright
-- JavaScript
-- Page Object Model (POM)
-- Faker (for dynamic test data)
 
-## Covered Use Cases
+* Playwright
+* JavaScript
+* Page Object Model (POM)
+* Faker (for dynamic test data)
 
-### 1. Register and Login
-- User registration with dynamic email
-- Successful registration validation
-- Logout and login with same credentials
+---
 
-### 2. Product Search, Add to Cart and Checkout
-- Search for product (Blue Jeans)
-- Add product to cart
-- Accept terms and checkout
-- Complete checkout using Cash on Delivery
-- Validate successful order placement
+## Covered Use Case
+
+### 1. Lead Form Submission
+
+* Navigate to Leadrat website
+* Open "Get Quote" form
+* Fill form using dynamic data (name, email, phone, company)
+* Submit the form
+* Validate successful submission via URL redirection
+
+---
+
+## Advanced Validation
+
+### API Validation
+
+* Captured network request using Playwright
+* Validated backend response using `response.ok()` (handles 200/204)
+* Ensures end-to-end validation (UI + API)
+
+---
 
 ## Framework Design
-This project is designed using the **Page Object Model (POM)** approach.
+
+This framework follows **Page Object Model (POM)**:
+
+* **Test Layer** → Handles test flow and data
+* **Page Layer** → Handles UI interactions
+* **Utils Layer** → Handles dynamic data generation
+
+---
+
+## Key Features
+
+* Dynamic test data using Faker + timestamp
+* Stable locators using ID strategy
+* API + UI combined validation
+* Screenshot, Video, and Trace enabled
+* HTML reporting with Playwright
+
+---
+
+## How to Run
+
+```bash
+npm install
+npx playwright install
+npx playwright test
+```
+
+---
+
+## Report
+
+To view test report:
+
+```bash
+npx playwright show-report
+```
+
+---
+
+## Notes
+
+* API returns **204 (No Content)** for successful form submission
+* Validated using `response.ok()` instead of fixed status code
+* Framework is designed to be scalable and maintainable
+
+---
